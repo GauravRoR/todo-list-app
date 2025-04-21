@@ -11,10 +11,13 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "https://todo-list-app-ah53.onrender.com",  // ✅ your frontend
+  origin: "https://todo-list-app-ah53.onrender.com",
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// 👇 Add this line here
+app.options('*', cors());
 
 
 app.use(express.json());
