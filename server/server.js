@@ -11,28 +11,25 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "https://todo-list-app-ah53.onrender.com",
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// 👇 Add this line here
-app.options('*', cors());
-
-
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error('MongoDB connection error:', err));
-
-app.use('/api/users', userRoutes);
-app.use('/api/todos', todoRoutes);
-
+// Simple test route
 app.get('/', (req, res) => {
   res.send('To-Do List API is running');
 });
 
+// Use routes
+app.use('/api/users', userRoutes);
+app.use('/api/todos', todoRoutes);
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
