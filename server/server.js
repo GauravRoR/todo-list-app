@@ -11,10 +11,12 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['https://todo-list-app-ah53.onrender.com', 'http://localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+  origin: '*',  // Allow all origins (only for testing)
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
