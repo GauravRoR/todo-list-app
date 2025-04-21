@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+// Should be something like this
+const API_URL = 'https://todo-list-api.onrender.com/api';
 
-// Create axios instance
 const api = axios.create({
   baseURL: API_URL,
   headers: {
@@ -10,7 +10,6 @@ const api = axios.create({
   }
 });
 
-// Add request interceptor to add auth token
 api.interceptors.request.use(
   (config) => {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -24,7 +23,6 @@ api.interceptors.request.use(
   }
 );
 
-// Auth API calls
 export const register = async (userData) => {
   const response = await api.post('/users', userData);
   return response.data;
@@ -35,7 +33,6 @@ export const login = async (userData) => {
   return response.data;
 };
 
-// Todo API calls
 export const getTodoLists = async () => {
   const response = await api.get('/todos');
   return response.data;
