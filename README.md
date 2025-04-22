@@ -1,9 +1,56 @@
-mongodb+srv://gauravdevock:<db_password>@cluster0.eozm2hu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 
 # To-Do List Application 📝
 
 A full-stack MERN (MongoDB, Express, React, Node.js) application for managing to-do lists with user authentication.
+
+🚀 Live Demo
+You can try out the application using the links below:
+
+Frontend: https://todo-list-app-ah53.onrender.com
+
+Backend API: https://todo-list-api-88jm.onrender.com
+
+📝 How to Use the Application
+🔐 Accessing the App
+Open your browser and go to https://todo-list-app-ah53.onrender.com
+
+You'll be taken to the login page.
+
+🧾 Creating an Account
+Click on “Register” if you're a new user.
+
+Fill in your name, email, and password.
+
+Click “Register” to sign up.
+
+After successful registration, you’ll be logged in automatically.
+
+🔑 Logging In
+Enter your registered email and password.
+
+Click “Login” to access your account.
+
+📋 Managing Todo Lists
+Add New List: Click “Add New List”, then enter a title.
+
+View List: Click any list to see its items.
+
+Edit List: Click the ✏️ icon next to the list title.
+
+Delete List: Click the 🗑️ icon next to the list title.
+
+✅ Managing Todo Items
+Add Item: Type in the input field and click “Add”.
+
+Mark Complete: Click the checkbox beside an item.
+
+Edit Item: Click the ✏️ icon next to an item.
+
+Delete Item: Click the 🗑️ icon next to an item.
+
+🚪 Logging Out
+Click the “Logout” button in the top navigation bar to end your session.
 
 ## Features 🚀
 
