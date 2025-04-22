@@ -8,7 +8,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in from localStorage
     const checkLoggedIn = async () => {
       let storedUser = localStorage.getItem('user');
       
@@ -24,14 +23,12 @@ export const AuthProvider = ({ children }) => {
     checkLoggedIn();
   }, []);
 
-  // Login user
   const login = async (userData) => {
     localStorage.setItem('user', JSON.stringify(userData));
     setUser(userData);
     setIsAuthenticated(true);
   };
 
-  // Logout user
   const logout = () => {
     localStorage.removeItem('user');
     setUser(null);

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// Should be something like this
+
 const API_URL = 'https://todo-list-api-88jm.onrender.com/api';
 
 const api = axios.create({
