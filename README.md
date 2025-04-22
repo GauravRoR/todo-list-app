@@ -1,8 +1,7 @@
-
-
 # To-Do List Application 📝
 
 A full-stack MERN (MongoDB, Express, React, Node.js) application for managing to-do lists with user authentication.
+
 
 🚀 Live Demo
 You can try out the application using the links below:
@@ -10,6 +9,8 @@ You can try out the application using the links below:
 Frontend: https://todo-list-app-ah53.onrender.com
 
 Backend API: https://todo-list-api-88jm.onrender.com
+
+GitHub Repository: https://github.com/GauravRoR/todo-list-app/tree/main
 
 📝 How to Use the Application
 🔐 Accessing the App
